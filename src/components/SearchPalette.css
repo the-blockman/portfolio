@@ -11,7 +11,7 @@
 }
 
 .palette {
-  width: min(640px, 92vw);
+  width: min(540px, 92vw);
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -38,12 +38,13 @@
   border: none;
   outline: none;
   color: var(--text);
-  font-family: inherit;
+  font-family: var(--font-mono);
   font-size: 1.05rem;
 }
 
 .palette__top input::placeholder {
   color: var(--muted);
+  font-size: 14px;
 }
 
 .palette__top kbd {
@@ -58,9 +59,11 @@
 
 .palette__label {
   padding: 14px 20px 8px;
-  font-size: 0.75rem;
+  font-size: 10px;
   letter-spacing: 0.15em;
   color: var(--muted);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
 }
 
 .palette__list {
@@ -75,10 +78,11 @@
   display: flex;
   align-items: center;
   gap: 14px;
-  padding: 14px 20px;
+  padding: 0.5rem 20px;
   border-left: 3px solid transparent;
   color: var(--text);
   cursor: pointer;
+  font-size: 11px;
 }
 
 .palette__item.is-active {
@@ -86,9 +90,19 @@
   border-left-color: var(--blue);
 }
 
+.palette__icon {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
 .palette__hint {
   margin-left: auto;
   color: var(--muted);
+  font-size: 11px;
 }
 
 .palette__empty {
@@ -99,6 +113,7 @@
 .palette__footer {
   padding: 12px 20px;
   border-top: 1px solid var(--border);
-  font-size: 0.8rem;
+  font-size: 10px;
   color: var(--muted);
+  background: var(--footer-bg);
 }

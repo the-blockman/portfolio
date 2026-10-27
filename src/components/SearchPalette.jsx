@@ -1,29 +1,20 @@
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import { FiChevronRight } from "react-icons/fi";
 import { sections } from "../data/sections";
 import "./SearchPalette.css";
 
 export default function SearchPalette({ open, onClose }) {
+  if (!open) return null;
+  return <PaletteContent onClose={onClose} />;
+}
+
+function PaletteContent({ onClose }) {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState(0);
-  const inputRef = useRef(null);
 
   const results = sections.filter((s) =>
     s.label.toLowerCase().includes(query.toLowerCase()),
   );
-
-  useEffect(() => {
-    if (open) {
-      setQuery("");
-      inputRef.current?.focus();
-    }
-  }, [open]);
-
-  useEffect(() => {
-    setActive(0);
-  }, [query]);
-
-  if (!open) return null;
 
   const go = (section) => {
     onClose();
@@ -52,9 +43,12 @@ export default function SearchPalette({ open, onClose }) {
         <div className="palette__top">
           <FiChevronRight className="palette__prompt" />
           <input
-            ref={inputRef}
+            autoFocus
             value={query}
-            onChange={(e) => setQuery(e.target.value)}
+            onChange={(e) => {
+              setQuery(e.target.value);
+              setActive(0);
+            }}
             onKeyDown={handleKeyDown}
             placeholder="Go to section..."
           />
@@ -76,7 +70,15 @@ export default function SearchPalette({ open, onClose }) {
                 onMouseEnter={() => setActive(i)}
                 onClick={() => go(s)}
               >
-                <Icon />
+                <span
+                  className="palette__icon"
+                  style={{
+                    color: s.color,
+                    background: `color-mix(in srgb, ${s.color} 14%, transparent)`,
+                  }}
+                >
+                  <Icon size={16} strokeWidth={1.75} />
+                </span>
                 <span>{s.label}</span>
                 <span className="palette__hint">{s.href}</span>
               </li>

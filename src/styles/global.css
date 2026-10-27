@@ -10,6 +10,12 @@
   --teal: #4ec9b0;
   --font-mono: "JetBrains Mono", monospace;
   --hover: rgba(255, 255, 255, 0.08);
+  --footer-bg: #262626;
+  --icon-home: #4fc1ff;
+  --icon-about: #c586c0;
+  --icon-experience: #dcdcaa;
+  --icon-projects: #ce9178;
+  --icon-contact: #6a9955;
 }
 
 [data-theme="light"] {
@@ -23,6 +29,12 @@
   --blue: #1a73e8;
   --teal: #0f8f77;
   --hover: rgba(0, 0, 0, 0.06);
+  --footer-bg: #f3f3f3;
+  --icon-home: #0b7bb5;
+  --icon-about: #9b4f96;
+  --icon-experience: #8a7a00;
+  --icon-projects: #b4532a;
+  --icon-contact: #2e7d32;
 }
 
 *,
