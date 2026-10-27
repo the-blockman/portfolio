@@ -8,4 +8,32 @@
   --accent: #e5620b; /* burnt orange, for small accents only */
   --blue: #2f9bff;
   --teal: #4ec9b0;
+  --font-mono: "JetBrains Mono", monospace;
+  --hover: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme="light"] {
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --border: #e2e2e2;
+  --text: #111111;
+  --name-dim: #9a9a9a;
+  --muted: #5f5f66;
+  --accent: #d9520a;
+  --blue: #1a73e8;
+  --teal: #0f8f77;
+  --hover: rgba(0, 0, 0, 0.06);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", sans-serif;
 }
