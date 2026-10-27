@@ -16,6 +16,7 @@
   --icon-experience: #dcdcaa;
   --icon-projects: #ce9178;
   --icon-contact: #6a9955;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
 }
 
 [data-theme="light"] {
