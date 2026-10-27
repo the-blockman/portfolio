@@ -95,60 +95,6 @@ export default function Header() {
           </a>
         </div>
       </header>
-      <header className="header">
-        <div className="header__left">
-          <nav className="nav">
-            {sections.map((s) => (
-              <a key={s.href} href={s.href}>
-                {s.label}
-              </a>
-            ))}
-          </nav>
-        </div>
-
-        <button
-          className="search"
-          type="button"
-          onClick={() => setSearchOpen(true)}
-        >
-          <FiSearch />
-          <span>{SITE_NAME} : portfolio</span>
-          <kbd>Ctrl K</kbd>
-        </button>
-
-        <div className="header__right">
-          <div className="clock">
-            <span className="clock__dot" />
-            {time}
-          </div>
-
-          <button
-            className="icon-btn"
-            onClick={toggleTheme}
-            aria-label="Toggle theme"
-          >
-            {theme === "dark" ? <FiSun /> : <FiMoon />}
-          </button>
-
-          <a
-            href="https://github.com/YOUR-USERNAME"
-            target="_blank"
-            rel="noreferrer"
-            className="icon-btn"
-          >
-            <FaGithub />
-          </a>
-
-          <a
-            href="/resume.pdf"
-            target="_blank"
-            rel="noreferrer"
-            className="resume-btn"
-          >
-            Resume <FiExternalLink />
-          </a>
-        </div>
-      </header>
       <SearchPalette open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
