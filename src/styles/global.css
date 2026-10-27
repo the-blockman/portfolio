@@ -1,0 +1,11 @@
+:root {
+  --bg: #121212;
+  --surface: #1c1c1c;
+  --border: #333333;
+  --text: #ffffff;
+  --name-dim: #737373;
+  --muted: #9d9da5;
+  --accent: #e5620b; /* burnt orange, for small accents only */
+  --blue: #2f9bff;
+  --teal: #4ec9b0;
+}
