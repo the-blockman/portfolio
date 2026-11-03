@@ -1,35 +1,12 @@
-/* two columns: heading on the left, bio on the right */
+/* title set on the left, bio on the right */
 .about-grid {
   display: grid;
   grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
   gap: 4em;
   align-items: start;
 }
-
-/* stacked heading, same recipe as the hero name */
-.about-title {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  font-family: var(--font-display, "Space Grotesk", sans-serif);
-  font-size: clamp(3.5em, 14vw, 6em);
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: -0.045em;
-  line-height: 0.85;
-}
-.about-first {
-  color: var(--text);
-}
-.about-last {
-  color: var(--name-dim);
-}
-
-/* gray subheading under the title */
-/* subline under the title */
-.about-sub {
-  margin: 1.5em 0 0;
-  color: var(--muted);
+.about .section-head {
+  margin-bottom: 0;
 }
 
 /* bio text */
@@ -55,7 +32,6 @@
   color: var(--text);
 }
 
-/* stack on narrow screens */
 @media (max-width: 900px) {
   .about-grid {
     grid-template-columns: minmax(0, 1fr);

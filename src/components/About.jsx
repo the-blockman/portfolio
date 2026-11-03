@@ -2,15 +2,15 @@ import "./About.css";
 
 export default function About() {
   return (
-    <section id="about" className="section about">
+    <section id="about" className="section section-alt about">
       <div className="about-grid">
-        <div className="about-head">
-          <h2 className="about-title">
-            <span className="about-first">Hi</span>
-            <span className="about-last">There!</span>
+        <header className="section-head">
+          <p className="section-label">About</p>
+          <h2 className="section-heading">
+            Hi <span className="dim">There!</span>
           </h2>
-          <p className="about-sub">// who I am · what I do · where I build</p>
-        </div>
+          <p className="section-sub">// who I am · what I do · where I build</p>
+        </header>
 
         <div className="about-copy">
           <p>

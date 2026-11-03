@@ -17,6 +17,7 @@
   --icon-projects: #ce9178;
   --icon-contact: #6a9955;
   --font-display: "Space Grotesk", "Inter", sans-serif;
+  --section-alt: #171717;
 }
 
 [data-theme="light"] {
@@ -36,6 +37,7 @@
   --icon-experience: #8a7a00;
   --icon-projects: #b4532a;
   --icon-contact: #2e7d32;
+  --section-alt: #f2f2f2;
 }
 
 *,
@@ -51,12 +53,13 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-/* shared shell for every section after the hero: same scale and side padding as .hero */
+/* shared shell for every section after the hero */
 .section {
   --u: clamp(16px, min(1.5625vw, 2.0833vh), 21.5px);
   font-family: var(--font-mono);
   font-size: var(--u);
   padding: 5em max(1.5em, calc((100% - 64.5em) / 2));
+  border-top: 1px solid var(--border);
   scroll-margin-top: var(--header-height, 64px);
 }
 
@@ -66,12 +69,49 @@ body {
   }
 }
 
-.section-title {
-  margin: 0 0 1.5em;
-  font-size: 2em;
-  font-weight: 600;
+/* tinted background for every other section */
+.section-alt {
+  background: var(--section-alt);
 }
 
-.section-hash {
-  color: var(--accent);
+/* shared title set: label with a line, heading, mono subline */
+.section-head {
+  margin-bottom: 3em;
+}
+
+.section-label {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  max-width: 40em;
+  margin: 0 0 1.25em;
+  font-size: 0.85em;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.section-label::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.section-heading {
+  margin: 0;
+  font-family: var(--font-display, "Space Grotesk", sans-serif);
+  font-size: clamp(2.5em, 7vw, 4em);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: -0.045em;
+  line-height: 0.95;
+  color: var(--text);
+}
+.section-heading .dim {
+  color: var(--name-dim);
+}
+
+.section-sub {
+  margin: 1em 0 0;
+  color: var(--muted);
 }
