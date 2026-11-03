@@ -50,3 +50,28 @@ body {
   color: var(--text);
   font-family: "Inter", sans-serif;
 }
+
+/* shared shell for every section after the hero: same scale and side padding as .hero */
+.section {
+  --u: clamp(16px, min(1.5625vw, 2.0833vh), 21.5px);
+  font-family: var(--font-mono);
+  font-size: var(--u);
+  padding: 5em max(1.5em, calc((100% - 64.5em) / 2));
+  scroll-margin-top: var(--header-height, 64px);
+}
+
+@media (orientation: portrait) {
+  .section {
+    --u: clamp(16px, 2.0833vw, 21.5px);
+  }
+}
+
+.section-title {
+  margin: 0 0 1.5em;
+  font-size: 2em;
+  font-weight: 600;
+}
+
+.section-hash {
+  color: var(--accent);
+}

@@ -23,6 +23,21 @@ function CodeCard() {
     };
   }, [view]);
 
+  // If the card gets hidden while expanded (rotating to portrait, resizing
+  // to a phone width), drop back to the normal state so the page unlocks.
+  useEffect(() => {
+    const mq = window.matchMedia(
+      "(orientation: portrait), (max-width: 600px), (orientation: landscape) and (max-height: 500px)",
+    );
+    const reset = () => {
+      if (mq.matches) setView((v) => (v === "expanded" ? "open" : v));
+    };
+
+    reset(); // covers loading the page already in a hidden state
+    mq.addEventListener("change", reset);
+    return () => mq.removeEventListener("change", reset);
+  }, []);
+
   const expanded = view === "expanded";
   const minimized = view === "minimized";
 
@@ -43,21 +58,46 @@ function CodeCard() {
     >
       <aside className="hero-card" onClick={(e) => e.stopPropagation()}>
         <div className="card-bar">
-          <button
-            className="card-dot dot-close"
-            aria-label="Close"
-            onClick={() => setView("closed")}
-          />
-          <button
-            className="card-dot dot-min"
-            aria-label={minimized ? "Restore" : "Minimize"}
-            onClick={() => setView(minimized ? "open" : "minimized")}
-          />
-          <button
-            className="card-dot dot-max"
-            aria-label={expanded ? "Exit full screen" : "Expand"}
-            onClick={() => setView(expanded ? "open" : "expanded")}
-          />
+          <div className="card-lights">
+            <button
+              className="card-dot dot-close"
+              aria-label="Close"
+              onClick={() => setView("closed")}
+            >
+              <svg viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M3.5 3.5l5 5M8.5 3.5l-5 5" />
+              </svg>
+            </button>
+
+            <button
+              className="card-dot dot-min"
+              aria-label={minimized ? "Restore" : "Minimize"}
+              onClick={() => setView(minimized ? "open" : "minimized")}
+            >
+              <svg viewBox="0 0 12 12" aria-hidden="true">
+                <path d="M3 6h6" />
+              </svg>
+            </button>
+
+            <button
+              className="card-dot dot-max"
+              aria-label={expanded ? "Exit full screen" : "Expand"}
+              onClick={() => setView(expanded ? "open" : "expanded")}
+            >
+              {expanded ? (
+                <svg viewBox="0 0 12 12" aria-hidden="true">
+                  <path className="fill" d="M4 4.2V8h3.8zM8 7.8V4H4.2z" />
+                </svg>
+              ) : (
+                <svg viewBox="0 0 12 12" aria-hidden="true">
+                  <path
+                    className="fill"
+                    d="M2.5 2.5v4.2l4.2-4.2zM9.5 9.5V5.3L5.3 9.5z"
+                  />
+                </svg>
+              )}
+            </button>
+          </div>
           <span className="card-file">praise.js</span>
         </div>
 
