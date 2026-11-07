@@ -16,8 +16,8 @@ export default function Contact() {
       </header>
 
       <p className="contact-blurb">
-        Open to front-end and WordPress roles, and to interesting projects. The
-        fastest way to reach me is email.
+        Open to front-end and WordPress roles, and to interesting projects. Feel
+        free to reach out via mail.
       </p>
 
       <a className="contact-email" href={`mailto:${EMAIL}`}>

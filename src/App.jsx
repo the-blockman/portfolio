@@ -5,6 +5,7 @@ import Projects from "./components/Projects.jsx";
 import Toolkit from "./components/Toolkit.jsx";
 import Experience from "./components/Experience.jsx";
 import Education from "./components/Education.jsx";
+import Contact from "./components/Contact.jsx";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Toolkit />
       <Experience />
       <Education />
+      <Contact />
     </>
   );
 }
