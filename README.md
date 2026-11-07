@@ -1,16 +1,47 @@
-# React + Vite
+# Praise Maduka — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio: a dark, mono-styled single-page site with a command-palette search, light/dark themes and a fully responsive layout.
 
-Currently, two official plugins are available:
+**Live:** <https://portfolio-rust-psi-kw9r61eipy.vercel.app/>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Portfolio preview](./public/preview.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Command-palette style search (`Go to section...`) with keyboard navigation
+- Light and dark mode with theme CSS variables
+- Sections: Hero, About, Projects, Toolkit, Experience, Education, Contact
+- Responsive layout with a mobile hamburger menu
+- Scroll animations <remove if not added yet>
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React · Vite · CSS (custom properties, no UI framework) · Lucide icons
+
+## Getting started
+
+```bash
+git clone <your-repo-url>
+cd <repo-folder>
+npm install
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+npm run preview
+```
+
+## Project structure
+
+src/
+├── components/ # Header, Hero, SearchPalette, ... (each with its own CSS)
+├── data/ # sections.js (nav and search entries)
+├── hooks/ # useSections.js, etc.
+└── styles/ # global.css
+
+## Contact
+
+<madukapraise15@gmail.com> · <https://github.com/the-blockman>
