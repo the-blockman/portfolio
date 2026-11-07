@@ -52,3 +52,13 @@
     gap: 1em;
   }
 }
+
+.tool-chip {
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+}
+.tool-chip:hover {
+  transform: translateY(-2px);
+  border-color: var(--tone);
+}

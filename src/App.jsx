@@ -7,8 +7,10 @@ import Experience from "./components/Experience.jsx";
 import Education from "./components/Education.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import useScrollReveal from "./hooks/useScrollReveal.js";
 
 function App() {
+  useScrollReveal();
   return (
     <>
       <Header />

@@ -159,18 +159,46 @@
     grid-template-columns: minmax(0, 1fr);
     gap: 1.5em;
   }
+
+  /* horizontal row: each role is a card, the next one peeks in */
   .exp-rail {
     display: flex;
-    gap: 1.5em;
+    gap: 0.75em;
+    padding: 0 2.5em 0.25em 0;
     overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -webkit-mask-image: linear-gradient(
+      to right,
+      #000 calc(100% - 2.5em),
+      transparent
+    );
+    mask-image: linear-gradient(to right, #000 calc(100% - 2.5em), transparent);
+  }
+  .exp-rail::-webkit-scrollbar {
+    display: none;
   }
   .exp-rail::before {
     display: none;
   }
-  .exp-tab {
-    white-space: nowrap;
-    padding: 0.5em 0;
+
+  .exp-rail li {
+    flex: none;
+    width: min(72%, 17em);
+    scroll-snap-align: start;
   }
+
+  .exp-tab {
+    height: 100%;
+    padding: 0.9em 1em;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 0.75em;
+  }
+  .exp-tab.is-active {
+    border-color: var(--tone);
+  }
+
   .exp-card {
     padding: 1.25em;
   }

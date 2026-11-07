@@ -99,7 +99,7 @@ export default function Header() {
           </div>
 
           <button
-            className="icon-btn"
+            className="icon-btn header-theme"
             onClick={toggleTheme}
             aria-label="Toggle theme"
           >
