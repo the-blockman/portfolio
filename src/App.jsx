@@ -4,6 +4,7 @@ import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
 import Toolkit from "./components/Toolkit.jsx";
 import Experience from "./components/Experience.jsx";
+import Education from "./components/Education.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Projects />
       <Toolkit />
       <Experience />
+      <Education />
     </>
   );
 }

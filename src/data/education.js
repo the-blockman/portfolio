@@ -5,7 +5,7 @@ export const degree = {
   period: "Graduated May 2026",
   grade: "CGPA: 9.05 / 10",
   focus:
-    "Coursework: Strength of Materials · Advanced Metrology · Jigs & Fixtures · Reverse Engineering · Robotics",
+    "Coursework: ANSYS APDL · Advanced Metrology · Reverse Engineering · Python · Java · Robotics (C++) · Database Management (MySQL)",
 };
 
 export const courses = [
