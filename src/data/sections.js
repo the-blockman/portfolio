@@ -4,6 +4,7 @@ import {
   LuGitBranch,
   LuFolderGit2,
   LuAtSign,
+  LuWrench,
 } from "react-icons/lu";
 
 export const sections = [
@@ -14,6 +15,7 @@ export const sections = [
     icon: LuBraces,
     color: "var(--icon-about)",
   },
+  { label: "Toolkit", href: "#toolkit", icon: LuWrench, color: "var(--teal)" },
   {
     label: "Experience",
     href: "#experience",

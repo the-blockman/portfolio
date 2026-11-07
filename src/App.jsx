@@ -2,6 +2,7 @@ import Header from "./components/Header.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Projects from "./components/Projects.jsx";
+import Toolkit from "./components/Toolkit.jsx";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Hero />
       <About />
       <Projects />
+      <Toolkit />
     </>
   );
 }

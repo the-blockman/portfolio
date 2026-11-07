@@ -1,14 +1,21 @@
 export const projects = [
   {
     title: "CFAM Church Website",
-    tag: "Team project",
+    tag: "Live site · WordPress",
     tone: "var(--icon-projects)",
     description:
-      "A multi-page church website built with a small team from a Figma design, with routing and responsive layouts.",
-    tech: ["React", "Vite", "React Router", "Tailwind CSS"],
-    live: "https://cfamchurch.org/demo",
-    github: "", // paste the repo URL
-    images: ["/projects/cfam-1.png"],
+      "A full redesign of the live church website, built with Elementor and a customized theme. Includes a a custom Sermons post type with speaker taxonomy. I also manage the hosting, DNS, caching and performance.",
+    tech: [
+      "WordPress",
+      "Elementor",
+      "PHP",
+      "CSS",
+      "Slider Revolution",
+      "Cloudflare",
+    ],
+    live: "https://cfamchurch.org",
+    github: "", // no public repo for the WordPress site
+    images: ["/projects/cfam-wp-home.png"],
   },
   {
     title: "Shopping Cart",
@@ -18,7 +25,7 @@ export const projects = [
       "A store with a product page, a cart and quantity controls. Cart state lives in Context and products load from a public API.",
     tech: ["React", "React Router", "Context API"],
     live: "https://shopping-cart-delta-amber.vercel.app/", // paste the live URL
-    github: "", // paste the repo URL
+    github: "",
     images: ["/projects/cart-1.png"],
   },
   {

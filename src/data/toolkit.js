@@ -17,7 +17,6 @@ import {
   SiElementor,
   SiGoogleappsscript,
   SiGooglesheets,
-  SiVisualstudiocode,
   SiCpanel,
   SiCloudflare,
 } from "react-icons/si";
@@ -72,7 +71,6 @@ export const toolkit = [
       { name: "Git", icon: FaGitAlt },
       { name: "GitHub", icon: FaGithub },
       { name: "Figma", icon: FaFigma },
-      { name: "VS Code", icon: SiVisualstudiocode },
       { name: "Node.js", icon: FaNodeJs },
     ],
   },
