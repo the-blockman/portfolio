@@ -4,8 +4,6 @@ My personal portfolio: a dark, mono-styled single-page site with a command-palet
 
 **Live:** <https://portfolio-rust-psi-kw9r61eipy.vercel.app/>
 
-![Portfolio preview](./public/preview.png)
-
 ## Features
 
 - Command-palette style search (`Go to section...`) with keyboard navigation
