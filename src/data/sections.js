@@ -5,6 +5,7 @@ import {
   LuFolderGit2,
   LuAtSign,
   LuWrench,
+  LuGraduationCap,
 } from "react-icons/lu";
 
 export const sections = [
@@ -15,7 +16,19 @@ export const sections = [
     icon: LuBraces,
     color: "var(--icon-about)",
   },
-  { label: "Toolkit", href: "#toolkit", icon: LuWrench, color: "var(--teal)" },
+  {
+    label: "Projects",
+    href: "#projects",
+    icon: LuFolderGit2,
+    color: "var(--icon-projects)",
+  },
+  {
+    label: "Toolkit",
+    href: "#toolkit",
+    icon: LuWrench,
+    color: "var(--teal)",
+    inHeader: false,
+  },
   {
     label: "Experience",
     href: "#experience",
@@ -23,10 +36,11 @@ export const sections = [
     color: "var(--icon-experience)",
   },
   {
-    label: "Projects",
-    href: "#projects",
-    icon: LuFolderGit2,
-    color: "var(--icon-projects)",
+    label: "Education",
+    href: "#education",
+    icon: LuGraduationCap,
+    color: "var(--blue)",
+    inHeader: false,
   },
   {
     label: "Contact",

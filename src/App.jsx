@@ -6,6 +6,7 @@ import Toolkit from "./components/Toolkit.jsx";
 import Experience from "./components/Experience.jsx";
 import Education from "./components/Education.jsx";
 import Contact from "./components/Contact.jsx";
+import Footer from "./components/Footer.jsx";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Experience />
       <Education />
       <Contact />
+      <Footer />
     </>
   );
 }

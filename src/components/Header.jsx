@@ -107,7 +107,7 @@ export default function Header() {
           </button>
 
           <a
-            href="https://github.com/YOUR-USERNAME"
+            href="https://github.com/the-blockman"
             target="_blank"
             rel="noreferrer"
             className="icon-btn header-github"
@@ -182,7 +182,7 @@ export default function Header() {
 
             <div className="sheet__footer">
               <a
-                href="https://github.com/YOUR-USERNAME"
+                href="https://github.com/the-blockman"
                 target="_blank"
                 rel="noreferrer"
                 className="sheet__btn"

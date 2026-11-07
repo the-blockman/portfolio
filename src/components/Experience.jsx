@@ -11,7 +11,7 @@ export default function Experience() {
       <header className="section-head">
         <p className="section-label">Experience</p>
         <h2 className="section-heading">
-          Where I've <span className="dim">been</span>
+          What I've <span className="dim">done</span>
         </h2>
         <p className="section-sub">// roles · responsibilities · stack</p>
       </header>

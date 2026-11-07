@@ -172,7 +172,8 @@
     gap: 4px;
   }
   .header__right .clock,
-  .header__right .header-github {
+  .header__right .header-github,
+  .header__right .header-theme {
     display: none;
   }
 

@@ -8,10 +8,10 @@ export default function Contact() {
       <header className="section-head">
         <p className="section-label">Contact</p>
         <h2 className="section-heading">
-          Let's build <span className="dim">something</span>
+          Get in <span className="dim">touch</span>
         </h2>
         <p className="section-sub">
-          // open to work, collabs & good conversations
+          // open to roles and projects, email is best
         </p>
       </header>
 
