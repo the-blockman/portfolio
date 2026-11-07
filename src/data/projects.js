@@ -4,7 +4,7 @@ export const projects = [
     tag: "Live site · WordPress",
     tone: "var(--icon-projects)",
     description:
-      "A full redesign of the live church website, built with Elementor and a customized theme. Includes a a custom Sermons post type with speaker taxonomy. I also manage the hosting, DNS, caching and performance.",
+      "A full redesign of the live church website, built with Elementor and a customized theme. Includes a custom Sermons post type with speaker taxonomy. I also manage the hosting, DNS, caching and performance.",
     tech: [
       "WordPress",
       "Elementor",
@@ -25,7 +25,7 @@ export const projects = [
       "A store with a product page, a cart and quantity controls. Cart state lives in Context and products load from a public API.",
     tech: ["React", "React Router", "Context API"],
     live: "https://shopping-cart-delta-amber.vercel.app/", // paste the live URL
-    github: "",
+    github: "https://github.com/the-blockman/shopping-cart",
     images: ["/projects/cart-1.png"],
   },
   {
