@@ -34,11 +34,13 @@ npm run preview
 
 ## Project structure
 
+```text
 src/
-├── components/ # Header, Hero, SearchPalette, ... (each with its own CSS)
-├── data/ # sections.js (nav and search entries)
-├── hooks/ # useSections.js, etc.
-└── styles/ # global.css
+├── components/   # Header, Hero, SearchPalette, ... (each with its own CSS)
+├── data/         # sections.js (nav and search entries)
+├── hooks/        # useSections.js, etc.
+└── styles/       # global.css
+```
 
 ## Contact
 
